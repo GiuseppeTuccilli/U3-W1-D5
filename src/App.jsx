@@ -12,11 +12,11 @@ import Profile from "./Components/Profile.jsx";
 function App() {
   return (
     <>
-      {/*<MyNavbar />
+      <MyNavbar />
       <Top />
       <Center />
-      <MyFooter />*/}
-      <Profile />
+      <MyFooter />
+      {/*<Profile />*/}
     </>
   );
 }
