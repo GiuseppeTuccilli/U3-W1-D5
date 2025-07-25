@@ -1,7 +1,7 @@
 const ButtonsGroup = function () {
   return (
     <div className="container">
-      <div className="row my-4">
+      <div className="row mt-4">
         <div className="col d-none d-lg-flex col-lg-3"></div>
         <div className="col col-6 border-bottom border-secondary d-flex justify-content-between flex-wrap">
           <button

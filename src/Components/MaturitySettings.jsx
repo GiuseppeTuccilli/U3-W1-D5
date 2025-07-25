@@ -1,7 +1,7 @@
 const MaturitySettings = function () {
   return (
     <div className="container">
-      <div className="row justify-content-center">
+      <div className="row justify-content-end">
         <div className="col col-12 col-lg-7 border-bottom border-secondary d-flex flex-column align-items-start">
           <h3 className="text-white my-2">Maturity Settings</h3>
           <button
