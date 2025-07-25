@@ -9,6 +9,7 @@ import MyFooter from "./Components/MyFooter.jsx";
 import Center from "./Components/Center.jsx";
 import Top from "./Components/Top.jsx";
 import Profile from "./Components/Profile.jsx";
+import Setting from "./Components/Setting.jsx";
 function App() {
   return (
     <>
@@ -17,6 +18,7 @@ function App() {
       <Center />
       <MyFooter />
       {/*<Profile />*/}
+      {/*<Setting />*/}
     </>
   );
 }
