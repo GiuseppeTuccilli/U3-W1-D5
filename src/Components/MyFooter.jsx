@@ -106,7 +106,7 @@ const MyFooter = function () {
             <div className="col mb-2">
               <button
                 type="button"
-                className="btn btn-sm footer-button rounded-0 mt-3"
+                className="btn btn-sm footer-button rounded-0 mt-3 text-white border-white "
               >
                 Service Code
               </button>

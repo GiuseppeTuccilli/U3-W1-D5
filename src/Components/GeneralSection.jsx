@@ -1,8 +1,12 @@
 import { Component } from "react";
+import { Spinner } from "react-bootstrap";
+import { Alert } from "react-bootstrap";
 
 class GeneralSection extends Component {
   state = {
     movies: [],
+    loading: true,
+    error: false,
   };
 
   componentDidMount() {
@@ -16,10 +20,11 @@ class GeneralSection extends Component {
       })
       .then((data) => {
         console.log(data);
-        this.setState({ movies: data.Search });
+        this.setState({ movies: data.Search, loading: false });
       })
       .catch((er) => {
-        alert("errore nella chiamata", er);
+        console.log("errore", er);
+        this.setState({ loading: false, error: true });
       });
   }
 
@@ -29,6 +34,18 @@ class GeneralSection extends Component {
         <div className="mx-3">
           <h4 className="text-white">{this.props.text}</h4>
           <div className="container-fluid">
+            {this.state.loading && (
+              <div className="text-center ">
+                <Spinner animation="border" variant="danger" />
+              </div>
+            )}
+
+            {this.state.error && (
+              <Alert variant="danger" className="text-center">
+                Errore nel recupero dei dati
+              </Alert>
+            )}
+
             <div className="row row-cols-1 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 row-cols-xl-8 mb-4">
               {this.state.movies.map((movie) => {
                 return (
@@ -42,13 +59,6 @@ class GeneralSection extends Component {
                   </div>
                 );
               })}
-              {/*<div className="col mb-2 text-center px-1">
-                <img
-                  className="img-fluid"
-                  src="https://placecats.com/300/300"
-                  alt="movie picture"
-                />
-              </div>*/}
             </div>
           </div>
         </div>
